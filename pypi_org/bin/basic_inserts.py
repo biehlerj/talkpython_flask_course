@@ -1,8 +1,12 @@
 import os
+import sys
 
-import data.db_session as db_session
-from data.package import Package
-from data.releases import Release
+import pypi_org.data.db_session as db_session
+from pypi_org.data.package import Package
+from pypi_org.data.releases import Release
+
+sys.path.insert(0, os.path.abspath(os.path.join(
+    os.path.dirname(__file__), "..", "..")))
 
 
 def main():
